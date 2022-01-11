@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            #header {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #2196F3;
+                font-size: 20vw;
+                font-weight: 10vw;
+                margin-bottom: 0%;
+            }
+            #content {
+                background-color:aliceblue;
+                border-color: rgb(233, 233, 233);
+                border-width: 3px;
+                border-style: solid;
+                
+            }
+            #inputlabel {
+                margin-top: 0%;
+                padding-top: 4vh;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 5vw;
+                font-weight: 15vw;
+            }
+            #myInput {
+                width: 100%;
+                height: 7%;
+                font-size: 100%;
+            }
+            #button {
+                width: 100%;
+                height: 8%;
+                background-color: #2196F3;
+                border-radius: 4vw;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 200%;
+                font-weight: 15vw;
+            }
+            #demo {
+                text-align: center;
+                border-radius: 4vw;
+                border-color: gray;
+                border-width: 3px;
+                border-style: solid;
+                width: 99%;
+                height: 15%;
+                font-size: 200%;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 3vh;
+                padding-bottom: 2vh;
+            }
+
+        </style>
+        <script>
+            
+            function myFunction()
+            {
+                
+
+                var x = 3
+                var result = 4
+                var pi = 0
+                var cycles = document.getElementById("myInput").value;
+
+                while (cycles > 0) {
+                    pi = result - (4/x);
+                    result = pi;
+                    x += 2;
+
+                    pi = result + (4/x);
+                    result = pi;
+                    x += 2;
+                    cycles = cycles - 1;
+                    
+                
+                }
+                document.getElementById("demo").innerHTML = pi;        
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <h1 id="header">Calculate Pi</h1>
+        <div id="content">
+            <p id="inputlabel">Input how many iterations of this calculation would u like to preform:</p>
+            <input id="myInput" type="text" value=""><br><br>
+            <input type="button" onclick="myFunction()" value="Calculate" id="button"><br><br>
+            <p id="demo">No Result</p>
+        </div>
+    </body>
+</html>
